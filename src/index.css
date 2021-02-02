@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.verts-lvl {
+  display: flex;
+}
+
+.vert-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vert {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
