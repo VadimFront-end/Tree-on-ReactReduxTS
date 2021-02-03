@@ -1,5 +1,6 @@
 import ADD_RIGHT_VERT from "./store/actions/ADD_RIGTH_VERT";
 import ADD_LEFT_VERT from "./store/actions/ADD_LEFT_VERT";
+import DELETE_VERT from "./store/actions/DELETE_VERT";
 
 export interface vert {
     id?: number,
@@ -27,4 +28,9 @@ export interface IAdd_left_vert {
     value: vert
 }
 
-export type IAction = IAdd_right_vert | IAdd_left_vert;
+export interface IDelete_vert {
+    type: typeof DELETE_VERT,
+    value: vert
+}
+
+export type IAction = IAdd_right_vert | IAdd_left_vert | IDelete_vert;
