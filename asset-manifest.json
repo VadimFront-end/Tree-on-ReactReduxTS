@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/tree-on-ReactReduxTS/static/css/main.9832dd1a.chunk.css",
-    "main.js": "/tree-on-ReactReduxTS/static/js/main.f35155b2.chunk.js",
-    "main.js.map": "/tree-on-ReactReduxTS/static/js/main.f35155b2.chunk.js.map",
+    "main.css": "/tree-on-ReactReduxTS/static/css/main.bee47045.chunk.css",
+    "main.js": "/tree-on-ReactReduxTS/static/js/main.7eb26afd.chunk.js",
+    "main.js.map": "/tree-on-ReactReduxTS/static/js/main.7eb26afd.chunk.js.map",
     "runtime-main.js": "/tree-on-ReactReduxTS/static/js/runtime-main.4899c298.js",
     "runtime-main.js.map": "/tree-on-ReactReduxTS/static/js/runtime-main.4899c298.js.map",
     "static/js/2.dc4e5c97.chunk.js": "/tree-on-ReactReduxTS/static/js/2.dc4e5c97.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.7a319a09.chunk.js": "/tree-on-ReactReduxTS/static/js/3.7a319a09.chunk.js",
     "static/js/3.7a319a09.chunk.js.map": "/tree-on-ReactReduxTS/static/js/3.7a319a09.chunk.js.map",
     "index.html": "/tree-on-ReactReduxTS/index.html",
-    "static/css/main.9832dd1a.chunk.css.map": "/tree-on-ReactReduxTS/static/css/main.9832dd1a.chunk.css.map",
+    "static/css/main.bee47045.chunk.css.map": "/tree-on-ReactReduxTS/static/css/main.bee47045.chunk.css.map",
     "static/js/2.dc4e5c97.chunk.js.LICENSE.txt": "/tree-on-ReactReduxTS/static/js/2.dc4e5c97.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4899c298.js",
     "static/js/2.dc4e5c97.chunk.js",
-    "static/css/main.9832dd1a.chunk.css",
-    "static/js/main.f35155b2.chunk.js"
+    "static/css/main.bee47045.chunk.css",
+    "static/js/main.7eb26afd.chunk.js"
   ]
 }
