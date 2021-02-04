@@ -18,3 +18,13 @@ body {
   border-radius: 50%;
   border: 1px solid black;
 }
+
+.bw-lvl {
+  height: 25px;
+  display: flex;
+}
+
+.arc {
+  height: 1px;
+  background: black;
+}

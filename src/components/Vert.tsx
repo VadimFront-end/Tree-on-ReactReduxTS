@@ -15,21 +15,33 @@ export type props = {
 
 const Vert = ({vert, add_right_vert, add_left_vert, delete_vert}: props) => {
     return (
-        <div style={{width: vert.lvl === 0 ? '100%': '50%'}}>
+        <div style={{width: vert.lvl === 0 ? '100%' : '50%'}}>
+            {
+                vert.lvl !== 0 ? <div className="bw-lvl" style={{justifyContent: vert.parent!.left === vert ? 'flex-end': 'flex-start'}}>
+                    <div className="arc" style={{transform: vert.parent!.left === vert ? `rotate(-${7*vert.lvl}deg)`: `rotate(${7*vert.lvl}deg)`, width: '50%'}}></div>
+                </div>: ''
+            }
             <div className="vert-wrapper">
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                     <div className="vert">{vert.id}
-                        <div style={{cursor: "pointer", display: vert.id === 0 ? 'none': ''}} onClick={() => delete_vert(vert.id)} >&#9746;</div>
+                        <div style={{cursor: "pointer", display: vert.id === 0 ? 'none' : ''}}
+                             onClick={() => delete_vert(vert.id)}>&#9746;</div>
                     </div>
                     <div>
-                        <button onClick={() => add_left_vert(vert.id)} style={{cursor: "pointer", visibility: vert.left ? 'hidden': 'visible'}}>L</button>
-                        <button onClick={() => add_right_vert(vert.id)} style={{cursor: "pointer", visibility: vert.right ? 'hidden': 'visible'}}>R</button>
+                        <button onClick={() => add_left_vert(vert.id)}
+                                style={{cursor: "pointer", visibility: vert.left ? 'hidden' : 'visible'}}>L
+                        </button>
+                        <button onClick={() => add_right_vert(vert.id)}
+                                style={{cursor: "pointer", visibility: vert.right ? 'hidden' : 'visible'}}>R
+                        </button>
                     </div>
                 </div>
             </div>
             <div style={{display: "flex", justifyContent: "space-evenly"}}>
-                {vert.left ? <Vert vert={vert.left} add_right_vert={add_right_vert} add_left_vert={add_left_vert} delete_vert={delete_vert}/> : <div style={{width: '50%'}}></div>}
-                {vert.right ? <Vert vert={vert.right} add_left_vert={add_left_vert} add_right_vert={add_right_vert} delete_vert={delete_vert}/> : <div style={{width: '50%'}}></div>}
+                {vert.left ? <Vert vert={vert.left} add_right_vert={add_right_vert} add_left_vert={add_left_vert}
+                                   delete_vert={delete_vert}/> : <div style={{width: '50%'}}></div>}
+                {vert.right ? <Vert vert={vert.right} add_left_vert={add_left_vert} add_right_vert={add_right_vert}
+                                    delete_vert={delete_vert}/> : <div style={{width: '50%'}}></div>}
             </div>
         </div>
     );
