@@ -1,26 +1,17 @@
 import React from 'react';
-import '../src/components/TreesLvL'
 import {vert} from "./interfaces";
-import TreesLvL from "./components/TreesLvL";
+import Vert from "./components/Vert";
 
 export type props = {
-    tree: vert[][],
-    lvlTree: number
+    tree: vert
 }
 
-const App = ({tree, lvlTree}: props) => {
-    console.log(tree, lvlTree)
+const App = ({tree}: props) => {
+    console.log(tree)
     return (
         <div className="App">
-            {
-                tree.map((val: vert[], index) => {
-                    return (
-                        <TreesLvL
-                            vertsLvL={val}
-                            key={index}/>
-                    )
-                })
-            }
+            <Vert
+                vert={tree}/>
         </div>
     );
 }

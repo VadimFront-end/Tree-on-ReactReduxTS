@@ -3,34 +3,24 @@ import ADD_LEFT_VERT from "./store/actions/ADD_LEFT_VERT";
 import DELETE_VERT from "./store/actions/DELETE_VERT";
 
 export interface vert {
-    id?: number,
+    id: number,
+    left: vert | null,
+    right: vert | null,
     lvl: number,
-    indexVert: number,
-    isCreated: boolean,
-    right: boolean,
-    left: boolean
+    parent: vert | null
 }
 
 export interface state {
-    tree: vert[][],
-    lvlTree: number
+    tree: vert,
+    lvlTree: number,
+    id: number
 }
 
 ///for actions
 
-export interface IAdd_right_vert {
-    type: typeof ADD_RIGHT_VERT,
-    value: vert
+export interface IAction {
+    type: typeof ADD_RIGHT_VERT | typeof ADD_LEFT_VERT | typeof DELETE_VERT,
+    value: number
 }
 
-export interface IAdd_left_vert {
-    type: typeof ADD_LEFT_VERT,
-    value: vert
-}
-
-export interface IDelete_vert {
-    type: typeof DELETE_VERT,
-    value: vert
-}
-
-export type IAction = IAdd_right_vert | IAdd_left_vert | IDelete_vert;
+export type ActionType = IAction;

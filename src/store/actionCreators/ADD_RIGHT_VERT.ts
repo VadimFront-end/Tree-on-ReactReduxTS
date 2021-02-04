@@ -1,7 +1,7 @@
 import ADD_RIGHT_VERT from "../actions/ADD_RIGTH_VERT";
-import {IAction, vert} from "../../interfaces";
+import {ActionType} from "../../interfaces";
 
-function add_right_vert(value: vert): IAction {
+function add_right_vert(value: number): ActionType {
     return {
         type: ADD_RIGHT_VERT,
         value
