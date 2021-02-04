@@ -14,6 +14,7 @@ export default function reducer(state = initialState, action: ActionType): state
     switch (action.type) {
         case ADD_RIGHT_VERT: {
             const vert = findVert(state.tree, action.value);
+            console.log(vert)
             vert!.right = {
                 parent: vert,
                 id: state.id,
@@ -47,10 +48,14 @@ export default function reducer(state = initialState, action: ActionType): state
         case DELETE_VERT: {
             const vert = findVert(state.tree, action.value);
             console.log(vert!.parent!.left === vert, vert!.parent!.right === vert)
-            if(vert!.parent!.left === vert)
+            if(vert!.parent!.left === vert) {
+                if(!vert!.parent!.lvl) state.tree.left = null;
                 vert!.parent!.left = null;
-            else
+            }
+            else {
+                if(!vert!.parent!.lvl) state.tree.right = null;
                 vert!.parent!.right = null;
+            }
             return {
                 ...state,
                 tree: {...state.tree}
