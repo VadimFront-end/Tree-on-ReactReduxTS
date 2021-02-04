@@ -49,11 +49,11 @@ export default function reducer(state = initialState, action: ActionType): state
             const vert = findVert(state.tree, action.value);
             console.log(vert!.parent!.left === vert, vert!.parent!.right === vert)
             if(vert!.parent!.left === vert) {
-                if(!vert!.parent!.lvl) state.tree.left = null;
+                if(!vert!.parent!.lvl) state.tree.left = null;//костыль
                 vert!.parent!.left = null;
             }
             else {
-                if(!vert!.parent!.lvl) state.tree.right = null;
+                if(!vert!.parent!.lvl) state.tree.right = null;//костыль
                 vert!.parent!.right = null;
             }
             return {
