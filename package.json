@@ -1,6 +1,7 @@
 {
   "name": "untitled4",
-  "version": "0.1.0",
+  "homepage": "http://VadimFront-end.github.io/tree-on-ReactReduxTS",
+  "version",: "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -22,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-redux": "^7.1.16"
+    "@types/react-redux": "^7.1.16",
+    "gh-pages": "^3.1.0"
   }
 }
