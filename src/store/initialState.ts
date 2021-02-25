@@ -1,6 +1,6 @@
-import {state} from '../interfaces';
+import {IState} from '../interfaces';
 
-const initialState: state = {
+const initialState: IState = {
     tree: {
         id: 0,
         lvl: 0,

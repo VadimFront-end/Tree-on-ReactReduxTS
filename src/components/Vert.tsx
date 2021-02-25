@@ -1,19 +1,17 @@
-import {ActionType, vert} from "../interfaces";
+import {TActionType, IVert} from "../interfaces";
 import React from "react";
 import {bindActionCreators, Dispatch} from "redux";
-import ADD_RIGHT_VERT from "../store/actionCreators/ADD_RIGHT_VERT";
-import ADD_LEFT_VERT from "../store/actionCreators/ADD_LEFT_VERT";
-import DELETE_VERT from "../store/actionCreators/DELETE_VERT";
+import {add_right_vert, add_left_vert, delete_vert} from "../store/actions";
 import {connect} from "react-redux";
 
 export type props = {
-    vert: vert,
-    add_right_vert(vert: number): ActionType,
-    add_left_vert(vert: number): ActionType,
-    delete_vert(vert: number): ActionType
+    vert: IVert,
+    add_right_vert(vert: number): TActionType,
+    add_left_vert(vert: number): TActionType,
+    delete_vert(vert: number): TActionType
 }
 
-const Vert = ({vert, add_right_vert, add_left_vert, delete_vert}: props) => {
+export const Vert = ({vert, add_right_vert, add_left_vert, delete_vert}: props) => {
     return (
         <div style={{width: vert.lvl === 0 ? '100%' : '50%'}}>
             {
@@ -49,9 +47,9 @@ const Vert = ({vert, add_right_vert, add_left_vert, delete_vert}: props) => {
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
-        add_right_vert: bindActionCreators(ADD_RIGHT_VERT, dispatch),
-        add_left_vert: bindActionCreators(ADD_LEFT_VERT, dispatch),
-        delete_vert: bindActionCreators(DELETE_VERT, dispatch)
+        add_right_vert: bindActionCreators(add_right_vert, dispatch),
+        add_left_vert: bindActionCreators(add_left_vert, dispatch),
+        delete_vert: bindActionCreators(delete_vert, dispatch)
     }
 }
 

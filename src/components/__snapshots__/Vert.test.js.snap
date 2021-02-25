@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing component \`Vert\` Can i test component with Snapshot 1`] = `
+<div
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  
+  <div
+    className="vert-wrapper"
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "column",
+        }
+      }
+    >
+      <div
+        className="vert"
+      >
+        0
+        <div
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+              "display": "none",
+            }
+          }
+        >
+          ☒
+        </div>
+      </div>
+      <div>
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+              "visibility": "visible",
+            }
+          }
+        >
+          L
+        </button>
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+              "visibility": "hidden",
+            }
+          }
+        >
+          R
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "space-evenly",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      <div
+        className="bw-lvl"
+        style={
+          Object {
+            "justifyContent": "flex-start",
+          }
+        }
+      >
+        <div
+          className="arc"
+          style={
+            Object {
+              "transform": "rotate(7deg)",
+              "width": "50%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="vert-wrapper"
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+            }
+          }
+        >
+          <div
+            className="vert"
+          >
+            1
+            <div
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "display": "",
+                }
+              }
+            >
+              ☒
+            </div>
+          </div>
+          <div>
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "visibility": "visible",
+                }
+              }
+            >
+              L
+            </button>
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "visibility": "visible",
+                }
+              }
+            >
+              R
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "space-evenly",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "width": "50%",
+            }
+          }
+        />
+        <div
+          style={
+            Object {
+              "width": "50%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

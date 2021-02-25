@@ -1,17 +1,15 @@
-import ADD_RIGHT_VERT from "./store/actions/ADD_RIGTH_VERT";
-import ADD_LEFT_VERT from "./store/actions/ADD_LEFT_VERT";
-import DELETE_VERT from "./store/actions/DELETE_VERT";
+import {ADD_RIGHT_VERT, ADD_LEFT_VERT, DELETE_VERT} from "./store/actionTypes";
 
-export interface vert {
+export interface IVert {
     id: number,
-    left: vert | null,
-    right: vert | null,
+    left: IVert | null,
+    right: IVert | null,
     lvl: number,
-    parent: vert | null
+    parent: IVert | null
 }
 
-export interface state {
-    tree: vert,
+export interface IState {
+    tree: IVert,
     lvlTree: number,
     id: number
 }
@@ -23,4 +21,4 @@ export interface IAction {
     value: number
 }
 
-export type ActionType = IAction;
+export type TActionType = IAction;

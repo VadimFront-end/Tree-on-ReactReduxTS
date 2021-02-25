@@ -1,16 +1,14 @@
 import initialState from "../initialState";
-import {ActionType, state, vert} from "../../interfaces";
-import ADD_RIGHT_VERT from "../actions/ADD_RIGTH_VERT";
-import ADD_LEFT_VERT from "../actions/ADD_LEFT_VERT";
-import DELETE_VERT from "../actions/DELETE_VERT";
+import {TActionType, IState, IVert} from "../../interfaces";
+import {ADD_RIGHT_VERT, ADD_LEFT_VERT, DELETE_VERT} from "../actionTypes";
 
-const findVert = (vert: vert | null, id: number): vert | null => {
+const findVert = (vert:IVert | null, id: number): IVert | null => {
     if (!vert) return null;
     if (vert.id === id) return vert;
     return findVert(vert.left, id) || findVert(vert.right, id);
 }
 
-export default function reducer(state = initialState, action: ActionType): state {
+export default function reducer(state = initialState, action: TActionType): IState {
     switch (action.type) {
         case ADD_RIGHT_VERT: {
             const vert = findVert(state.tree, action.value);

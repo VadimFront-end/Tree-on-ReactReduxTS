@@ -1,9 +1,9 @@
 import React from 'react';
-import {vert} from "./interfaces";
+import {IVert} from "./interfaces";
 import Vert from "./components/Vert";
 
 export type props = {
-    tree: vert
+    tree: IVert
 }
 
 const App = ({tree}: props) => {

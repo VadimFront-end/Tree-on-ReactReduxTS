@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing component \`Test\` Can i test component with Snapshot 1`] = `
+<div
+  className="Test"
+>
+  <div>
+    Vlad
+  </div>
+</div>
+`;

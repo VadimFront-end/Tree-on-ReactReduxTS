@@ -5,9 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {connect, Provider} from 'react-redux'
 import store from './store/store';
-import {state} from './interfaces'
+import {IState} from './interfaces'
 
-const mapStateToProps = (state: state) => state;
+const mapStateToProps = (state: IState) => state;
 
 const WrappedComponent = connect(mapStateToProps)(App);
 
